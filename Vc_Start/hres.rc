@@ -1,0 +1,11 @@
+//
+100 ICON "bing.ico"
+
+//
+101 MENU
+BEGIN
+	POPUP "File(&F)"
+	BEGIN
+		MENUITEM "exit(&X)",102
+	END
+END
