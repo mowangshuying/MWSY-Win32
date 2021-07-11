@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/360.png</file>
+        <file>image/360bigIcon.png</file>
+        <file>image/360Icon.png</file>
+        <file>image/box.png</file>
+        <file>image/btn360BigNumber.png</file>
+        <file>image/CenterButton.png</file>
+        <file>image/circlepage2.png</file>
+        <file>image/close.png</file>
+        <file>image/coloth.png</file>
+        <file>image/min.png</file>
+        <file>image/muti.png</file>
+        <file>image/star.png</file>
+        <file>image/String.png</file>
+        <file>image/tBtn1.png</file>
+        <file>image/tBtn2.png</file>
+        <file>image/tBtn3.png</file>
+        <file>image/tBtn4.png</file>
+        <file>image/tBtn5.png</file>
+        <file>image/tBtn6.png</file>
+        <file>image/tBtn7.png</file>
+        <file>image/tBtn8.png</file>
+        <file>image/tBtn9.png</file>
+        <file>image/tBtn360BigLogin.png</file>
+        <file>image/tlBtn1.png</file>
+        <file>image/tlBtn2.png</file>
+        <file>image/tlBtn3.png</file>
+        <file>image/tlBtn4.png</file>
+        <file>image/tlBtn5.png</file>
+        <file>image/tlBtn6.png</file>
+        <file>image/tlBtn7.png</file>
+        <file>image/tlBtn8.png</file>
+        <file>image/tlBtn9.png</file>
+        <file>image/up.png</file>
+    </qresource>
+</RCC>
