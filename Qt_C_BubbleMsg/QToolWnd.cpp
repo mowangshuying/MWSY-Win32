@@ -5,6 +5,7 @@ QToolWnd::QToolWnd(QWidget* p /*= nullptr*/)
 {
 	setFixedWidth(55);
 	setWindowFlags(Qt::FramelessWindowHint);
+	//setObjectName("QToolWnd");
 	setStyleSheet("background-color:#2E2E2E;");
 	//脱离父窗口的样式控制
 	setAttribute(Qt::WA_StyledBackground);
@@ -53,6 +54,9 @@ void QToolWnd::onClickMsgBtn()
 	m_selectIndex = 0;
 	m_msgBtn->setIcon(QPixmap("./img/msgBtnClicked.png"));
 	m_contactsBtn->setIcon(QPixmap("./img/contactsBtnNomal.png"));
+	
+	//发出信号
+	pageChanged(0);
 }
 
 void QToolWnd::onClickContactsBtn()
@@ -60,5 +64,6 @@ void QToolWnd::onClickContactsBtn()
 	m_selectIndex = 0;
 	m_msgBtn->setIcon(QPixmap("./img/msgBtnNormal.png"));
 	m_contactsBtn->setIcon(QPixmap("./img/contactsBtnClicked.png"));
+	pageChanged(1);
 }
 

@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QHBoxLayout>
+#include <QStackedLayout>
 
 #include "QToolWnd.h"
 #include "QCommListWnd.h"
@@ -26,8 +27,12 @@ public slots:
 public:
 	QHBoxLayout* m_hLayout;
 	QToolWnd* m_toolWnd;
-	QCommListWnd* m_commListWnd;
+	QCommListWnd* m_commMsgListWnd;
+	QCommListWnd* m_commContactsListWnd;
 	QSessionWnd* m_sessionWnd;
+
+	QStackedLayout *m_sLayout1;
+	QStackedLayout* m_sLayout2;
 
 	bool m_bPress = false;
 	QPoint m_poPress;
