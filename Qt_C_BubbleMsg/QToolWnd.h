@@ -12,10 +12,13 @@ class QToolWnd : public QWidget
 public:
 	//»á»°´°¿Ú
 	QToolWnd(QWidget* p = nullptr);
+signals:
+	void pageChanged(int num);
 public slots:
 	void onClickMsgBtn();
 	void onClickContactsBtn();
 public:
+	//QMainWnd* m_mainWnd;
 	QVBoxLayout* m_vBoxLayout;
 	QPushButton *m_msgBtn;
 	QPushButton* m_contactsBtn;

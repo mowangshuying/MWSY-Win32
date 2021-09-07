@@ -92,7 +92,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="QChatMsgWnd.cpp" />
+    <ClCompile Include="QCommContactItemWnd.cpp" />
     <ClCompile Include="QCommListWnd.cpp" />
+    <ClCompile Include="QCommMsgItemWnd.cpp" />
     <ClCompile Include="QMainWnd.cpp" />
     <ClCompile Include="QSessionTopWnd.cpp" />
     <ClCompile Include="QSessionWnd.cpp" />
@@ -112,6 +114,10 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QSessionTopWnd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="QCommContactItemWnd.h" />
+    <ClInclude Include="QCommMsgItemWnd.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
