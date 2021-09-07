@@ -20,11 +20,8 @@ QMainWnd::QMainWnd(QWidget* p /*= nullptr*/)
 	m_hLayout->setSpacing(0);
 
 	m_sLayout1 = new QStackedLayout();
-	//m_sLayout1->setContentsMargins(0, 0, 0, 0);
-	//m_sLayout1->setSpacing(0);
 	m_sLayout1->addWidget(m_commMsgListWnd);
 	m_sLayout1->addWidget(m_commContactsListWnd);
-	//m_sLayout1->setGeometry(QRect(0,0,250,65));
 
 	for (int i = 0; i < 2; i++)
 	{
