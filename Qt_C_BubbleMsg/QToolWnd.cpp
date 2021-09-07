@@ -19,15 +19,11 @@ QToolWnd::QToolWnd(QWidget* p /*= nullptr*/)
 	m_msgBtn->setFixedSize(30, 30);
 	m_msgBtn->setIconSize(QSize(30, 30));
 	m_msgBtn->setIcon(QPixmap("./img/msgBtnNormal.png"));
-	//m_msgBtn->setAttribute(Qt::WA_StyledBackground);
-	//m_msgBtn->setStyleSheet("background-color:white;");
 
 	m_contactsBtn = new QPushButton(this);
-	//m_contactsBtn->setFixedWidth(this->width());
 	m_contactsBtn->setFixedSize(30, 30);
 	m_contactsBtn->setIconSize(QSize(30, 30));
 	m_contactsBtn->setIcon(QPixmap("./img/contactsBtnNomal.png"));
-	//m_contactsBtn->setAttribute(Qt::WA_StyledBackground);
 	
 	m_vBoxLayout->setAlignment(Qt::AlignCenter);
 	m_vBoxLayout->setContentsMargins(0, 20, 0, 0);
@@ -56,7 +52,7 @@ void QToolWnd::onClickMsgBtn()
 	m_contactsBtn->setIcon(QPixmap("./img/contactsBtnNomal.png"));
 	
 	//·¢³öÐÅºÅ
-	pageChanged(0);
+	signal_toolWndPageChanged(0);
 }
 
 void QToolWnd::onClickContactsBtn()
@@ -64,6 +60,6 @@ void QToolWnd::onClickContactsBtn()
 	m_selectIndex = 0;
 	m_msgBtn->setIcon(QPixmap("./img/msgBtnNormal.png"));
 	m_contactsBtn->setIcon(QPixmap("./img/contactsBtnClicked.png"));
-	pageChanged(1);
+	signal_toolWndPageChanged(1);
 }
 

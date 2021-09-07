@@ -5,15 +5,19 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QVector>
+
+/*
+* 最右边工具栏窗口
+*/
 class QToolWnd : public QWidget 
 {
 	//添加消息映射支持
 	Q_OBJECT
 public:
-	//会话窗口
+	//工具栏窗口
 	QToolWnd(QWidget* p = nullptr);
 signals:
-	void pageChanged(int num);
+	void signal_toolWndPageChanged(int num);
 public slots:
 	void onClickMsgBtn();
 	void onClickContactsBtn();

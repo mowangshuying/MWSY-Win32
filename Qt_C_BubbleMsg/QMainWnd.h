@@ -1,6 +1,6 @@
 #pragma once
 
-
+#include <map>
 #include <QWidget>
 #include <QHBoxLayout>
 #include <QStackedLayout>
@@ -8,6 +8,7 @@
 #include "QToolWnd.h"
 #include "QCommListWnd.h"
 #include "QSessionWnd.h"
+#include "QCommContactInfo.h"
 
 class QMainWnd : public QWidget
 {
@@ -16,6 +17,7 @@ class QMainWnd : public QWidget
 public:
 	//»á»°´°¿Ú
 	QMainWnd(QWidget* p = nullptr);
+
 public slots:
 	void closeWnd();
 	void minWnd();
@@ -24,15 +26,25 @@ public slots:
 	void mouseMoveEvent(QMouseEvent* event);
 	void mousePressEvent(QMouseEvent* event);
 	void mouseReleaseEvent(QMouseEvent* event);
+
+	void slot_sesIdToIndex(int sesid);
+	void slot_createSesAndSelect(QMap<QString, QString> infoMap);
+	void slot_toolWndPageChanged(int page);
 public:
 	QHBoxLayout* m_hLayout;
 	QToolWnd* m_toolWnd;
+
 	QCommListWnd* m_commMsgListWnd;
 	QCommListWnd* m_commContactsListWnd;
-	QSessionWnd* m_sessionWnd;
+	
+	QCommContactInfo* m_commContactInfo;
 
+	QSessionWnd* m_sessionWnd;
 	QStackedLayout *m_sLayout1;
 	QStackedLayout* m_sLayout2;
+
+	int m_lastSesId = -1;
+	int m_lastContactId = -1;
 
 	bool m_bPress = false;
 	QPoint m_poPress;

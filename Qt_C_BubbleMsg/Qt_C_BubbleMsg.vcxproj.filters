@@ -47,6 +47,15 @@
     <ClCompile Include="QCommContactItemWnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QCustomListWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCommContactInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QSimpleSplit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QSessionWnd.h">
@@ -67,12 +76,21 @@
     <QtMoc Include="QSessionTopWnd.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="QCommContactInfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QSimpleSplit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QCommMsgItemWnd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="QCommContactItemWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QCustomListWidgetItem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

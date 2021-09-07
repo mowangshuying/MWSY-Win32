@@ -6,6 +6,8 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QHBoxLayout>
+#include <QMap>
+#include <QString>
 
 class QCommListWnd : public QWidget
 {
@@ -21,17 +23,25 @@ public:
 
 	QCommListWnd(QWidget* p = nullptr, QCommListWndEnum wndType = QCommMsgItemWnd_Tpye);
 
+signals:
+	void commListChanged(int num);
+	void signal_commListChangedAndSendInfo(QMap<QString,QString> infoMap);
+	//void signal_test();
+public slots:
+	void onCurrentItemClicked(QListWidgetItem* item);
 public:
-	void addMsgItem(const char* headUrl, const char* name, const char* msg);
+	QListWidgetItem* addMsgItem(const char* headUrl, const char* name, const char* msg,qint64 sesid);
 	void addContactsItem(const char* headUrl, const char* name);
+
 
 	QVBoxLayout* m_vLayout;
 	QHBoxLayout* m_hLayout;
 
+	//搜索框
 	QLineEdit* m_searchEdit;
+	//开始的那个按钮
 	QPushButton* m_startGroupBtn;
-	
 	QListWidget* m_listWidget;
-
+	//窗口类型
 	QCommListWndEnum m_WndType;
 };

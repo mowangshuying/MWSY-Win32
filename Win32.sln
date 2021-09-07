@@ -75,6 +75,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qt_C_LoginWnd", "Qt_C_Login
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qt_C_BubbleMsg", "Qt_C_BubbleMsg\Qt_C_BubbleMsg.vcxproj", "{551D5DEE-B021-4A7A-B5D0-58F82AB98672}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qt_C_Split", "Qt_C_Split\Qt_C_Split.vcxproj", "{7F33B25B-A916-4AC9-A871-B87A30261F12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -490,6 +492,16 @@ Global
 		{551D5DEE-B021-4A7A-B5D0-58F82AB98672}.Release|x64.ActiveCfg = Release|Win32
 		{551D5DEE-B021-4A7A-B5D0-58F82AB98672}.Release|x86.ActiveCfg = Release|Win32
 		{551D5DEE-B021-4A7A-B5D0-58F82AB98672}.Release|x86.Build.0 = Release|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Debug|Win32.Build.0 = Debug|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Debug|x64.ActiveCfg = Debug|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Debug|x86.ActiveCfg = Debug|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Debug|x86.Build.0 = Debug|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Release|Win32.ActiveCfg = Release|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Release|Win32.Build.0 = Release|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Release|x64.ActiveCfg = Release|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Release|x86.ActiveCfg = Release|Win32
+		{7F33B25B-A916-4AC9-A871-B87A30261F12}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
