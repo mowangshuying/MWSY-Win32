@@ -63,13 +63,16 @@ QMainWnd::QMainWnd(QWidget* p /*= nullptr*/)
 		m_commMsgListWnd->addMsgItem("./img/head1.png", str1.toLocal8Bit().data(), "[2条]_小鑫鑫:[小程序] 0号...",i);
 	}
 
-	for (int i = 0; i < 2; i++){
-		if (i == 0) {
-			m_commContactsListWnd->addContactsItem("./img/head2.png", "新的朋友0号");
-		}
-		else {
-			m_commContactsListWnd->addContactsItem("./img/head2.png", "新的朋友1号");
-		}
+	for (int i = 0; i < 10; i++){
+		//if (i == 0) {
+		//	m_commContactsListWnd->addContactsItem("./img/head2.png", "新的朋友0号");
+		//}
+		//else {
+		//	m_commContactsListWnd->addContactsItem("./img/head2.png", "新的朋友1号");
+		//}
+
+		QString str1 = QString(QString::fromLocal8Bit("新的朋友%1号")).arg(i);
+		m_commContactsListWnd->addContactsItem("./img/head2.png", str1.toLocal8Bit().data());
 	}
 
 	m_hLayout->addWidget(m_toolWnd);
