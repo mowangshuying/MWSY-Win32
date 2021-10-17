@@ -39,6 +39,7 @@ QMainWnd::QMainWnd(QWidget* p /*= nullptr*/)
 	m_sLayout2->addWidget(m_commContactInfo);
 	
 	//
+	m_currentSesId = 1;
 	for (int i = 1; i <=10; i++)
 	{
 		m_sessionWnd = new QSessionWnd();
@@ -46,7 +47,7 @@ QMainWnd::QMainWnd(QWidget* p /*= nullptr*/)
 		str += QString(QString::fromLocal8Bit("%1xxxx")).arg(i);
 		m_sessionWnd->m_sesTopWnd->m_titleLabel->setText(str);
 		//模拟一个sesid;
-		m_sessionWnd->m_sesId = i;
+		m_sessionWnd->m_sesId = m_currentSesId++;
 		connect(m_sessionWnd->m_sesTopWnd->m_closeBtn, SIGNAL(clicked()), this, SLOT(closeWnd()));
 		connect(m_sessionWnd->m_sesTopWnd->m_maxBtn, SIGNAL(clicked()), this, SLOT(maxWnd()));
 		connect(m_sessionWnd->m_sesTopWnd->m_minBtn, SIGNAL(clicked()), this, SLOT(minWnd()));
@@ -175,17 +176,21 @@ void QMainWnd::slot_createSesAndSelect(QMap<QString, QString> infoMap)
 	//获取info中的信息
 	QString str1 =  infoMap["name"];
 	//创建一个会话项
-	QListWidgetItem *pItem = m_commMsgListWnd->addMsgItem("./img/head1.png", str1.toLocal8Bit().data(), "", 12);
+	int sesid = m_currentSesId++;
+	QListWidgetItem *pItem = m_commMsgListWnd->addMsgItem("./img/head1.png", str1.toLocal8Bit().data(), "",sesid);
+	m_commMsgListWnd->m_listWidget->setCurrentItem(pItem);
 	//创建一个会话窗口
 	{
-		int i = 12;
+		//int i = 12;
 		m_sessionWnd = new QSessionWnd();
 		QString str = m_sessionWnd->m_sesTopWnd->m_titleLabel->text();
-		str += QString(QString::fromLocal8Bit("%1xxxx")).arg(i);
+		str += QString(QString::fromLocal8Bit("%1xxxx")).arg(sesid);
 		m_sessionWnd->m_sesTopWnd->m_titleLabel->setText(str);
+		
 		//模拟一个sesid;
-		m_sessionWnd->m_sesId = i;
-		m_lastSesId = i;
+		m_sessionWnd->m_sesId = sesid;
+		m_lastSesId = sesid;
+
 		connect(m_sessionWnd->m_sesTopWnd->m_closeBtn, SIGNAL(clicked()), this, SLOT(closeWnd()));
 		connect(m_sessionWnd->m_sesTopWnd->m_maxBtn, SIGNAL(clicked()), this, SLOT(maxWnd()));
 		connect(m_sessionWnd->m_sesTopWnd->m_minBtn, SIGNAL(clicked()), this, SLOT(minWnd()));
@@ -193,7 +198,7 @@ void QMainWnd::slot_createSesAndSelect(QMap<QString, QString> infoMap)
 	}
 
 	m_toolWnd->m_msgBtn->click();
-	slot_sesIdToIndex(12);
+	slot_sesIdToIndex(sesid);
 }
 
 void QMainWnd::slot_toolWndPageChanged(int page)

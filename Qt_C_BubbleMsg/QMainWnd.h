@@ -46,6 +46,8 @@ public:
 	int m_lastSesId = -1;
 	int m_lastContactId = -1;
 
+	int m_currentSesId = 0;
+
 	bool m_bPress = false;
 	QPoint m_poPress;
 };
