@@ -4,6 +4,7 @@
 #include "QCommContactItemWnd.h"
 #include "QCustomListWidgetItem.h"
 #include "QSimpleSplit.h"
+#include "QSelectWnd1.h"
 
 #include <QDebug>
 
@@ -49,7 +50,8 @@ QCommListWnd::QCommListWnd(QWidget* p /*= nullptr*/, QCommListWndEnum wndType/*Q
 	//m_listWidget->setStyleSheet("border-left:0px ;");
 	m_vLayout->addWidget(m_listWidget);
 
-
+	m_selectWnd1 = new QSelectWnd1(nullptr);
+	m_selectWnd1->hide();
 
 	setFixedWidth(250);
 	setObjectName("QCommListWnd");
@@ -57,7 +59,7 @@ QCommListWnd::QCommListWnd(QWidget* p /*= nullptr*/, QCommListWndEnum wndType/*Q
 	setAttribute(Qt::WA_StyledBackground);
 	setWindowFlags(Qt::FramelessWindowHint);
 	connect(m_listWidget, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(onCurrentItemClicked(QListWidgetItem*)));
-
+	connect(m_startGroupBtn, SIGNAL(clicked()), this, SLOT(onStartGroupBtnClicked()));
 
 	////设置滚动条的样式
 	m_listWidget->verticalScrollBar()->setStyleSheet("QScrollBar:vertical"
@@ -196,6 +198,23 @@ void QCommListWnd::onCurrentItemClicked(QListWidgetItem* item)
 		//遍历stackLayout判断对应的窗口sesid
 		commListChanged(sesid);
 	}
+}
+
+void QCommListWnd::onStartGroupBtnClicked()
+{
+	//qDebug() << "onStartGroupBtnClicked()";
+	QRect rect = m_startGroupBtn->geometry();
+	qDebug() << "rect" << rect << endl;
+	qDebug() << " the pos of startGroupBtn: " << m_startGroupBtn->pos();
+	QPoint gPoint = m_startGroupBtn->mapToGlobal(QPoint(0,0));
+	
+	/*选择的窗口只能允许出现一个*/
+	//QWidget *qw = new QSelectWnd1(nullptr);
+	QRect swRect = m_selectWnd1->geometry();
+	swRect.setX(gPoint.x() - m_selectWnd1->width()+m_startGroupBtn->width());
+	swRect.setY(gPoint.y() + m_startGroupBtn->height() + 5);
+	m_selectWnd1->setGeometry(swRect);
+	m_selectWnd1->show();
 }
 
 QListWidgetItem* QCommListWnd::addMsgItem(const char* headUrl, const char* name, const char*  msg,qint64 sesid)

@@ -115,9 +115,11 @@ QCommContactInfo::QCommContactInfo(QWidget* p /*= nullptr*/)
 
 	setLayout(m_vLayout);
 	setAttribute(Qt::WA_StyledBackground);
-	setStyleSheet("background-color:white");
 
+	//setStyleSheet("background-color:white;border-image:url(./img/emptybg.png)");
 	connect(m_sendMsgBtn, SIGNAL(clicked()), this, SLOT(slot_sendMsgBtnClick()));
+
+	hideBgPng();
 }
 
 void QCommContactInfo::slot_commListChangedAndSendInfo(QMap<QString, QString> map)
@@ -135,8 +137,35 @@ void QCommContactInfo::slot_sendMsgBtnClick()
 	emit signal_sendMsgBtnClick(map);
 }
 
+void QCommContactInfo::hideBgPng()
+{
+	m_nickNameLabel->hide();
+	m_markNameLabel->hide();
+	m_rolenameLabel->hide();//角色名
+	m_channelLabel->hide();
+	m_markNameFillLabel->hide();
+	m_rolenameFillLabel->hide();
+	m_channelFillLabel->hide();
+	//发送消息窗口
+	m_sendMsgBtn->hide();
+	setStyleSheet("background-color:white;border-image:url(./img/emptybg.png)");
+}
+
+void QCommContactInfo::showBgPng()
+{
+	m_nickNameLabel->show();
+	m_markNameLabel->show();
+	m_rolenameLabel->show();//角色名
+	m_channelLabel->show();
+	m_markNameFillLabel->show();
+	m_rolenameFillLabel->show();
+	m_channelFillLabel->show();
+	//发送消息窗口
+	m_sendMsgBtn->show();
+	setStyleSheet("background-color:white;");
+}
+
 //void QCommContactInfo::slot_test()
 //{
 //	qDebug() << "slot_tst" << endl;
 //}
-

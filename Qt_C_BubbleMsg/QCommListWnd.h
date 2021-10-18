@@ -9,6 +9,8 @@
 #include <QMap>
 #include <QString>
 
+#include "QSelectWnd1.h"
+
 class QCommListWnd : public QWidget
 {
 	//添加消息映射支持
@@ -29,6 +31,8 @@ signals:
 	//void signal_test();
 public slots:
 	void onCurrentItemClicked(QListWidgetItem* item);
+	//如果点击那个按钮的话
+	void onStartGroupBtnClicked();
 public:
 	QListWidgetItem* addMsgItem(const char* headUrl, const char* name, const char* msg,qint64 sesid);
 	void addContactsItem(const char* headUrl, const char* name);
@@ -41,6 +45,9 @@ public:
 	QLineEdit* m_searchEdit;
 	//开始的那个按钮
 	QPushButton* m_startGroupBtn;
+
+	QSelectWnd1* m_selectWnd1;
+
 	QListWidget* m_listWidget;
 	//窗口类型
 	QCommListWndEnum m_WndType;

@@ -18,6 +18,9 @@ public slots:
 	void slot_commListChangedAndSendInfo(QMap<QString, QString> map);
 	void slot_sendMsgBtnClick();
 public:
+	void showBgPng();
+	void hideBgPng();
+public:
 	QVBoxLayout* m_vLayout;
 
 	//头部的关闭打开等按钮

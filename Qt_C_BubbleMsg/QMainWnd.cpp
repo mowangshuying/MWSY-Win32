@@ -38,6 +38,12 @@ QMainWnd::QMainWnd(QWidget* p /*= nullptr*/)
 	//联系人详情页位于位置0永远不变.联系人详情页面只有一个
 	m_sLayout2->addWidget(m_commContactInfo);
 	
+	{
+		connect(m_commContactInfo->m_closeBtn, SIGNAL(clicked()), this, SLOT(closeWnd()));
+		connect(m_commContactInfo->m_maxBtn, SIGNAL(clicked()), this, SLOT(maxWnd()));
+		connect(m_commContactInfo->m_minBtn, SIGNAL(clicked()), this, SLOT(minWnd()));
+	}
+
 	//
 	m_currentSesId = 1;
 	for (int i = 1; i <=10; i++)
@@ -137,6 +143,9 @@ void QMainWnd::mousePressEvent(QMouseEvent* event)
 {
 	m_bPress = true;
 	m_poPress = event->pos();
+	//当前添加好友或者添加群的窗口的打开的，直接隐藏
+	//m_commMsgListWnd->m_selectWnd1->hide();
+	//m_commContactsListWnd->m_selectWnd1->hide();
 }
 
 void QMainWnd::mouseReleaseEvent(QMouseEvent* event)
@@ -211,8 +220,13 @@ void QMainWnd::slot_toolWndPageChanged(int page)
 		if (m_lastSesId != -1) {
 			slot_sesIdToIndex(m_lastSesId);
 		}
+		else {
+			//设置背景图片打开
+			m_commContactInfo->showBgPng();
+		}
 	}
 	else {
+		m_commContactInfo->showBgPng();
 		slot_sesIdToIndex(0);
 	}
 }

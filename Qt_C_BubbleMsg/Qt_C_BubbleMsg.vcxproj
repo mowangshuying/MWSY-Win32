@@ -97,7 +97,9 @@
     <ClCompile Include="QCommListWnd.cpp" />
     <ClCompile Include="QCommMsgItemWnd.cpp" />
     <ClCompile Include="QCustomListWidgetItem.cpp" />
+    <ClCompile Include="QFindFriendOrGroupWnd.cpp" />
     <ClCompile Include="QMainWnd.cpp" />
+    <ClCompile Include="QSelectWnd1.cpp" />
     <ClCompile Include="QSessionTopWnd.cpp" />
     <ClCompile Include="QSessionWnd.cpp" />
     <ClCompile Include="QSimpleSplit.cpp" />
@@ -119,6 +121,8 @@
     <QtMoc Include="QSessionTopWnd.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="QFindFriendOrGroupWnd.h" />
+    <QtMoc Include="QSelectWnd1.h" />
     <QtMoc Include="QSimpleSplit.h" />
     <QtMoc Include="QCommContactInfo.h" />
     <ClInclude Include="QCommContactItemWnd.h" />
