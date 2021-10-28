@@ -28,13 +28,15 @@ QSelectWnd1::QSelectWnd1(QWidget* p)
 	setFixedHeight(m_createGroupBtn->height()+m_addContactsOrGroupBtn->height());
 	setLayout(m_vLayout);
 
+	pFindFriendOrGroupWnd = new QFindFriendOrGroupWnd();
+	pFindFriendOrGroupWnd->hide();
 	connect(m_addContactsOrGroupBtn, SIGNAL(clicked()), this, SLOT(slot_addContactsOrGroupBtnClick()));
 }
 
 void QSelectWnd1::slot_addContactsOrGroupBtnClick()
 {
-	QFindFriendOrGroupWnd* pWnd = new QFindFriendOrGroupWnd();
-	pWnd->show();
+	//pFindFriendOrGroupWnd = new QFindFriendOrGroupWnd();
+	pFindFriendOrGroupWnd->show();
 }
 
 //void QSelectWnd1::mousePressEvent(QMouseEvent* event)

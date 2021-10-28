@@ -62,6 +62,9 @@
     <ClCompile Include="QFindFriendOrGroupWnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QFindFriendItemWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QSessionWnd.h">
@@ -92,6 +95,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="QFindFriendOrGroupWnd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QFindFriendItemWnd.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
