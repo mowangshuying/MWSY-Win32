@@ -9,15 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Form Files">
-      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
-      <Extensions>ui</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
-      <Extensions>qrc;*</Extensions>
-      <ParseFiles>false</ParseFiles>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="QSessionWnd.cpp">
@@ -65,6 +56,24 @@
     <ClCompile Include="QFindFriendItemWnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QNextWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QApplyFriendWnd1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QApplyFriendWnd2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCreateGroupWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCreateGroupListwnd1Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCreateGroupListwnd2Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QSessionWnd.h">
@@ -98,6 +107,24 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="QFindFriendItemWnd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QNextWnd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QApplyFriendWnd1.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QApplyFriendWnd2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCreateGroupWnd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCreateGroupListwnd1Item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCreateGroupListwnd2Item.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
