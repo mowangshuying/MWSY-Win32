@@ -5,12 +5,11 @@
 #include <QVBoxLayout>
 #include <QEvent>
 
+#include "QFindFriendOrGroupWnd.h"
+
 class QSelectWnd1 : public QWidget {
 	Q_OBJECT
 protected:
-	//添加鼠标的事件
-	//void mousePressEvent(QMouseEvent* event);
-
 	bool event(QEvent* event);
 public:
 	QSelectWnd1(QWidget* p);
@@ -22,4 +21,5 @@ public:
 	QVBoxLayout* m_vLayout;
 	QPushButton* m_addContactsOrGroupBtn;
 	QPushButton* m_createGroupBtn;
+	QFindFriendOrGroupWnd* pFindFriendOrGroupWnd;
 };

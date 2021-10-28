@@ -240,7 +240,6 @@ void QCommListWnd::addContactsItem(const char* headUrl, const char*  name)
 {
 	QCommContactItemWnd* pMsgItem = new QCommContactItemWnd(m_listWidget,headUrl,name);
 	QListWidgetItem* pListItem = new QCustomListWidgetItem(m_listWidget);
-
 	pMsgItem->setFixedWidth(this->width()-5);
 	pListItem->setSizeHint(QSize(this->width()-5, 65));
 	m_listWidget->setItemWidget(pListItem, pMsgItem);

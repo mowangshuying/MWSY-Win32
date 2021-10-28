@@ -8,6 +8,8 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QLineEdit>
+#include <QListWidget>
+#include <QCheckBox>
 
 class QFindFriendOrGroupWnd : public QWidget {
 	Q_OBJECT
@@ -17,11 +19,16 @@ public:
 	void mouseMoveEvent(QMouseEvent* event);
 	void mousePressEvent(QMouseEvent* event);
 	void mouseReleaseEvent(QMouseEvent* event);
+
+	void addFriendItem(const char* headUrl, const char* name);
+public slots:
+	void closeWnd();
+	void minWnd();
 public:
 	QVBoxLayout* m_vLayout;
 	QHBoxLayout* m_hLayout1;
+	//QHBoxLayout* m_hLayout2;
 	QHBoxLayout* m_hLayout2;
-	QHBoxLayout* m_hLayout3;
 
 	//第1行
 	QLabel* m_titleLabel;
@@ -29,12 +36,14 @@ public:
 	QPushButton* m_closeBtn;
 
 	//第2行
-	QPushButton* m_findPersonBtn;
-	QPushButton* m_findGroupBtn;
+	QCheckBox* m_findPersonChx;
+	QCheckBox* m_findGroupChx;
 
 	//第3行
 	QLineEdit* m_searchEdit;
 	QPushButton* m_searchBtn;
+
+	QListWidget* m_listWidget;
 
 	bool m_bPress = false;
 	QPoint m_poPress;

@@ -17,20 +17,17 @@ int main(int argc, char** argv)
 
 	QVBoxLayout* vLayout = new QVBoxLayout();
 	w.setLayout(vLayout);
-
 	w.setAttribute(Qt::WA_StyledBackground);
 
-	QPushButton btn1;
-	QPushButton btn2;
-	QPushButton btn3;
+	QPushButton btn1("btn");
+	QPushButton btn2("btn");
+	QPushButton btn3("btn");
 
 	vLayout->addWidget(&btn1);
-
 	vLayout->addWidget(new QSimpleSplit());
-
 	vLayout->addWidget(&btn2);
-
 	vLayout->addWidget(&btn3);
+	vLayout->addStretch();
 
 	w.show();
 	app.exec();

@@ -7,8 +7,8 @@ QSimpleSplit::QSimpleSplit(QWidget* p /*= nullptr*/)
 	//无焦点
 	setFocusPolicy(Qt::NoFocus);
 	//设置高度为2
-	setFixedHeight(20);
+	setFixedHeight(1);
 	//设置分割线的颜色
-	setStyleSheet("background-color:blue;border: 1px solid red");
+	setStyleSheet("background-color:blue");
 }
 
