@@ -32,11 +32,23 @@ QFindFriendItemWnd::QFindFriendItemWnd(QWidget* p, const char* headUrl, const ch
 	m_hLayout->addWidget(m_addFriendBtn);
 	m_hLayout->addSpacing(80); 
 
+
+	//m_nextWnd = new QNextWnd();
+	//m_nextWnd->hide();
+
 	m_addFriendBtn->setStyleSheet("background-color:#1aad19;border-style: none;");
 
 	setFixedHeight(65);
 	setObjectName("QCommContactItemWnd");
 	setStyleSheet("#QCommContactItemWnd{border-bottom:1px solid red;}");
 
+	connect(m_addFriendBtn, SIGNAL(clicked()), this, SLOT(slot_addFriendBtnClick()));
+
+}
+
+void QFindFriendItemWnd::slot_addFriendBtnClick()
+{
+	m_nextWnd = new QNextWnd();
+	m_nextWnd->show();
 }
 

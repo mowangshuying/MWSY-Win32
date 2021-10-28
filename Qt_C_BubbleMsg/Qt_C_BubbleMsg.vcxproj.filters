@@ -65,6 +65,18 @@
     <ClCompile Include="QFindFriendItemWnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QNextWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QApplyFriendWnd1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QApplyFriendWnd2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCreateGroupWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QSessionWnd.h">
@@ -98,6 +110,18 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="QFindFriendItemWnd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QNextWnd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QApplyFriendWnd1.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QApplyFriendWnd2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCreateGroupWnd.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

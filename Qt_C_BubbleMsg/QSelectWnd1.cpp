@@ -22,16 +22,30 @@ QSelectWnd1::QSelectWnd1(QWidget* p)
 	setFixedHeight(m_createGroupBtn->height()+m_addContactsOrGroupBtn->height());
 	setLayout(m_vLayout);
 
-	pFindFriendOrGroupWnd = new QFindFriendOrGroupWnd();
-	pFindFriendOrGroupWnd->hide();
+	m_findFriendOrGroupWnd = new QFindFriendOrGroupWnd();
+	m_findFriendOrGroupWnd->hide();
+
+	m_crateGroupWnd = new QCreateGroupWnd();
+	m_crateGroupWnd->hide();
+
 	connect(m_addContactsOrGroupBtn, SIGNAL(clicked()), this, SLOT(slot_addContactsOrGroupBtnClick()));
+	connect(m_createGroupBtn, SIGNAL(clicked()), this, SLOT(slot_createGroup()));
 }
 
 void QSelectWnd1::slot_addContactsOrGroupBtnClick()
 {
-	pFindFriendOrGroupWnd->show();
+	if (m_findFriendOrGroupWnd != nullptr) {
+		m_findFriendOrGroupWnd->show();
+	}
 }
 
+
+void QSelectWnd1::slot_createGroup()
+{
+	if (m_crateGroupWnd != nullptr) {
+		m_crateGroupWnd->show();
+	}
+}
 
 bool QSelectWnd1::event(QEvent* event) {
 	if (event->type() == QEvent::ActivationChange)
