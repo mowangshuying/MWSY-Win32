@@ -1,4 +1,4 @@
-# MwsyWin32 项目自述文件
+# MwsyWin32 项目开发说明文件
 
 ## Cs_CreateStruct
 
