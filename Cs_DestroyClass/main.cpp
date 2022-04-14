@@ -13,7 +13,7 @@ public:
 
 	~A()
 	{
-
+		std::cout << "~A()" << std::endl;
 	}
 
 	int m_x;
